@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf") format("ttf"),
+         url("../fonts/Roboto-Light.ttf") format("ttf"),
+         url("../fonts/Roboto-Bold.ttf") format("ttf"),
+         url("../fonts/Roboto-Black.ttf") format("ttf");
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    color: #373737;
+    background-color: #f4f4f4;
+}
+
+.advantages {
+    width: 940px;
+    margin: 0px auto;
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+.flex-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стили для блока "информация в цифрах" */
+.data {
+    box-sizing: border-box;
+    text-align: center;
+    flex-basis: 294px;
+    margin-bottom: 40px;
+    flex-shrink: 2;
+}
+
+.data-title {
+    color: #f39003;
+    font-size: 33px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+sup {
+    font-size: 18px;
+    color: #f39003;
+}
+
+.data-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Стили для блока "преимущества" */
+.line-wrap {
+    box-sizing: border-box; 
+    /*Без этого св-ва приходится задавать margin. Что предпочтительней?
+    использовать: margin или box-sizing? Иначе блоки сливаются в один*/
+    flex-basis: 294px;
+    display: flex;
+    margin-bottom: 30px;
+    padding: 27px 20px 27px 13px;
+    background-color: white;
+}
+
+.line-icons {
+    margin-right: 10px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+    word-break: break-all;
+}
+
+@media (max-width: 576px) {
+    .flex-line {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .data {
+        flex-basis: 0; 
+        width: 294px;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+
+    .line-wrap {
+        margin-right: 0;
+        flex-basis: 0;
+        width: 294px;
+        align-self: center;
+    }
+
+    .data-title {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    .data-text {margin: 10px;}
+}
